@@ -1,0 +1,9 @@
+{
+  "volumes": [
+    {
+      "name": "max_db_storage",
+      "mountPath": "/var/data",
+      "sizeGB": 34
+    }
+  ]
+}
