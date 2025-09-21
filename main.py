@@ -20,7 +20,7 @@ def init_db():
     ''')
     conn.commit()
     conn.close()
-    print("✅ 34 GB Database initialized at runtime on Railway volume.")
+    print("✅ 6 GB Database initialized at runtime on Railway volume.")
 
 init_db()
 
@@ -69,12 +69,12 @@ def db_size():
         if os.path.exists(DB_PATH):
             size_bytes = os.path.getsize(DB_PATH)
             size_gb = round(size_bytes / (1024**3), 3)
-            free_gb = 34 - size_gb
+            free_gb = 6 - size_gb
             return jsonify({
                 "db_file": DB_PATH,
                 "used_gb": size_gb,
                 "free_gb": round(free_gb, 3),
-                "total_allocated_gb": 34
+                "total_allocated_gb": 6
             }), 200
         else:
             return jsonify({"error": "DB not created yet"}), 404
